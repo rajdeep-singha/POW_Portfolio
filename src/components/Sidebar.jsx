@@ -6,13 +6,14 @@ import {
   Globe, 
   Users, 
   BarChart3, 
-  ChevronUp 
+  ChevronUp, 
+  Link
 } from 'lucide-react';
 import JobPreferencesModal from './JobPreferencesModal';
-
+import HireMeModal from '../smallComponents/HireMeModal';
 
 const Sidebar = ({ darkMode }) => {
-
+  const [modalOpen, setModalOpen] = useState(false);
   
 const [showPreferences, setShowPreferences] = useState(false);
 
@@ -54,23 +55,28 @@ const [showPreferences, setShowPreferences] = useState(false);
 
           <div className={`flex items-center space-x-3 p-2 rounded-lg transition-colors cursor-pointer ${
             darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
-          }`}>
-            <Shield className={`w-5 h-5 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`} />
+          }`}onClick={()=> window.open("https://www.notion.so/Proof-of-Work-Rajdeep-b9a610a0d6cc48fdadde76c3b421772b", "_blank")} >
+            <Shield className={`w-5 h-5 ${darkMode ? 'text-gray-400' : 'text-gray-500' }`} />
             <span>POW</span>
           </div>
-          <div className={`flex items-center space-x-3 p-2 rounded-lg transition-colors cursor-pointer ${
+          {/* <div className={`flex items-center space-x-3 p-2 rounded-lg transition-colors cursor-pointer ${
             darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
           }`}>
-            {/* <Globe className={`w-5 h-5 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`} />
+
+            <Globe className={`w-5 h-5 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`} />
             <span>Custom Domain</span>
             <span className="ml-auto bg-red-500 text-white px-2 py-1 rounded text-xs font-medium">Not Connected</span>
-          </div>
-          <div className={`flex items-center space-x-3 p-2 rounded-lg transition-colors cursor-pointer ${
-            darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
-          }`}>
-            <Users className={`w-5 h-5 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`} />
-            <span>Invite and Earn</span> */}
-          </div>
+          </div> */}
+            <div
+        className={`flex items-center space-x-3 p-2 rounded-lg transition-colors cursor-pointer ${
+          darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
+        }`}
+        onClick={() => setModalOpen(true)}
+      >
+        <Users className={`w-5 h-5 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`} />
+        <span>Hire Me</span>
+      </div>
+      <HireMeModal isOpen={modalOpen} onClose={() => setModalOpen(false)} darkMode={darkMode} />
         </div>
       </div>
 

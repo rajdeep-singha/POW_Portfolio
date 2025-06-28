@@ -5,6 +5,7 @@ import GitHubCalendar from 'react-github-calendar';
 import BlogCard from '../smallComponents/BlogCard';
 
 
+
 const WorkSection = ({ darkMode }) => {
   const platforms = [
     { name: 'Twitter', icon: <div className="w-4 h-4 bg-black rounded-full">X</div>, color: '#000000', link: 'https://twitter.com/singh61402' },
@@ -49,21 +50,21 @@ const WorkSection = ({ darkMode }) => {
   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
     <BlogCard
       title="Unfold Hackathon Day 1 of Meme Coins, QR Codes and Big Hall Dreams"
-      cover="public\Blog2.jpeg"
+      cover="\Blog2.jpeg"
       link="https://singh384.hashnode.dev/unfold-hackathon-day-1-of-meme-coins-qr-codes-and-big-hall-dreams?ref=peerlist"
       platform="Medium"
       darkMode={darkMode}
     />
     <BlogCard
       title="Unlock the Power of Wallet Tracker"
-      cover="public\Blog1.png"
+      cover="\Blog1.png"
       link="https://medium.com/@rajdeepsingha384/unlock-the-power-of-wallet-tracker-your-personal-web3-companion-f78580be8b9c"
       platform="Medium"
       darkMode={darkMode}
     />
     <BlogCard
       title="DungBeetle | 7M PostGresTable and Much More..."
-      cover="public\Blog3.png"
+      cover="\Blog3.png"
       link="https://medium.com/@rajdeepsingha384/dungbeetle-7m-postgrestable-and-much-more-bfae6423a4be"
       platform="Hashnode"
       darkMode={darkMode}

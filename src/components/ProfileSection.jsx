@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Calendar, MapPin, Globe, Github } from 'lucide-react';
 import SkillBadge from './SkillBadge.jsx';
-
+import HireMeModal from '../smallComponents/HireMeModal';
+import { Users } from 'lucide-react';
 
 const ProfileSection = ({ darkMode }) => {
   const skills = [
@@ -16,13 +17,13 @@ const ProfileSection = ({ darkMode }) => {
     { name: 'Node.JS', color: '#339933' },
     { name: 'MongoDB', color: '#47a248' }
   ];
-
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <div className="text-center">
       <div className="relative inline-block mb-6">
         <div className="w-32 h-32 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
           <img 
-            src="public\Raj.jpg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" 
+            src="\Raj.jpg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" 
             alt="Profile" 
             className="w-full h-full rounded-full object-cover"
           />
@@ -61,6 +62,16 @@ const ProfileSection = ({ darkMode }) => {
           <Github className="w-4 h-4" />
           <span>rajdeep_singha</span>
         </div>
+        <div
+        className={`flex items-center space-x-3 p-2 rounded-lg transition-colors cursor-pointer ${
+          darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
+        }`}
+        onClick={() => setModalOpen(true)}
+      >
+        <Users className={`w-5 h-5 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`} />
+        <span>Hire Me</span>
+      </div>
+      <HireMeModal isOpen={modalOpen} onClose={() => setModalOpen(false)} darkMode={darkMode} />
       </div>
       
       <div className="flex flex-wrap gap-3 justify-center mb-8">
