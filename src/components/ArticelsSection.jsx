@@ -28,17 +28,7 @@ const ArticlesSection = ({ darkMode }) => {
 
   return (
     <div className="space-y-8">
-      <div className="flex items-center justify-between">
-        <h2 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Articles</h2>
-        <button className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-colors ${
-          darkMode 
-            ? 'bg-green-600 hover:bg-green-700 text-white' 
-            : 'bg-green-500 hover:bg-green-600 text-white'
-        }`}>
-          <Plus className="w-4 h-4" />
-          <span>Write Article</span>
-        </button>
-      </div>
+     
 
       <div className="space-y-6">
         {articles.map((article, index) => (

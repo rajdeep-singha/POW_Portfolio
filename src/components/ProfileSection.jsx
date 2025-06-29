@@ -54,11 +54,18 @@ const ProfileSection = ({ darkMode }) => {
           <MapPin className="w-4 h-4" />
           <span>REMOTE</span>
         </div>
-        <div className="flex items-center space-x-1  hover:  cursor-pointer" onClick={()=> window.open("https://cal.com/rajdeep-singha/30min", "_blank")}>
+        <div className={`flex items-center space-x-3 p-2 rounded-lg transition-colors cursor-pointer ${
+          darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
+        }`}
+         onClick={()=> window.open("https://cal.com/rajdeep-singha/30min", "_blank")}>
           <Globe className="w-4 h-4" />
+          
           <span>Book 1:1</span>
         </div>
-        <div className="flex items-center space-x-1  hover:  cursor-pointer" onClick={()=> window.open("https://github.com/rajdeep-singha", "_blank")}>
+        <div className={`flex items-center space-x-3 p-2 rounded-lg transition-colors cursor-pointer ${
+          darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
+        }`} 
+        onClick={()=> window.open("https://github.com/rajdeep-singha", "_blank")}>
           <Github className="w-4 h-4" />
           <span>rajdeep_singha</span>
         </div>
