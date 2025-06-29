@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import { 
-  Settings, 
   Briefcase, 
-  Shield, 
-  Globe, 
+  Shield,  
   Users, 
   BarChart3, 
   ChevronUp, 
-  Link
 } from 'lucide-react';
 import JobPreferencesModal from './JobPreferencesModal';
 import HireMeModal from '../smallComponents/HireMeModal';

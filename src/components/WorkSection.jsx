@@ -1,5 +1,4 @@
 import React from 'react';
-import { Plus } from 'lucide-react';
 import PlatformCard from './PlatformCard';
 import GitHubCalendar from 'react-github-calendar';
 import BlogCard from '../smallComponents/BlogCard';

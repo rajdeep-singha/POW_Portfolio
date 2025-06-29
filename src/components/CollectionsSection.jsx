@@ -1,5 +1,5 @@
 import React from 'react';
-import { Plus, Folder } from 'lucide-react';
+import {  Folder } from 'lucide-react';
 
 const CollectionsSection = ({ darkMode }) => {
   const collections = [

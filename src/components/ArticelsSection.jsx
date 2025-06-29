@@ -1,5 +1,5 @@
 import React from 'react';
-import { Plus, Calendar, BookOpen, ExternalLink } from 'lucide-react';
+import {  Calendar, BookOpen, ExternalLink } from 'lucide-react';
 
 const ArticlesSection = ({ darkMode }) => {
   const articles = [

@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Search, Bell, Sun, Moon } from 'lucide-react';
+import { User, Search,  Sun, Moon } from 'lucide-react';
 
 const Header = ({ darkMode, setDarkMode }) => {
   return (

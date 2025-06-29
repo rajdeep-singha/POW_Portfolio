@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
-import { supabase } from '../supabaseClient';
 import SaveMessageComponent from './SaveMessageComponent';
 const theme = {
   background: "#1f2937",
@@ -14,9 +13,9 @@ const theme = {
 };
 
 const HireMeAssistant = () => {
-  const [messages, setMessages] = useState([]);
+  // const [messages, setMessages] = useState([]);
 
-  const handleEnd = ({ steps, values }) => {
+  const handleEnd = ({ values }) => {
     const userMessage = values[values.length - 1];
     console.log("User left a message:", userMessage);
 
@@ -94,11 +93,10 @@ const HireMeAssistant = () => {
         id: 'contact',
         message: "What message would you like to leave for Rajdeep?",
         trigger: 'messageInput',
-        color: "#000000",
+      
       },
       {
         id: 'messageInput',
-        color: "#000000",
         user: true,
         trigger: 'saveMessage',
       },
