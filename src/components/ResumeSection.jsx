@@ -4,45 +4,56 @@ import { Download, Briefcase, GraduationCap, Award, Building } from 'lucide-reac
 const ResumeSection = ({ darkMode }) => {
   const experiences = [
     {
-      title: 'Senior React Developer',
-      company: 'PushChain',
-      period: '2024 - Present',
-      location: 'Remote',
-      description: 'Leading frontend development for blockchain applications using React.js and Web3 technologies.',
-      skills: ['React.js', 'TypeScript', 'Web3', 'Ethereum']
-    },
-    {
-      title: 'Smart Contract Developer',
+      title: 'Smart Contract Developer/Meaven',
       company: 'Rise In',
-      period: '2023 - 2024',
+      period: '2024- Present',
       location: 'Remote',
-      description: 'Developed and deployed smart contracts on Ethereum blockchain, focusing on DeFi protocols.',
-      skills: ['Solidity', 'Ethereum', 'DeFi', 'Smart Contracts']
-    },
+      description: 'Developed and deployed smart contracts in Clarity on Stacks',
+      skills: ['Solidity', 'Ethereum', 'DeFi', 'Smart Contracts', 'Clarity','Move-Lang']
+    }, 
     {
-      title: 'Full Stack Developer',
-      company: 'Tech Startup',
-      period: '2022 - 2023',
+      title: 'Vice President',
+      company: 'TPHxSRMIST',
+      period: 'Dec 2024 - Present',
       location: 'Remote',
       description: 'Built scalable web applications using modern JavaScript frameworks and cloud technologies.',
       skills: ['Node.js', 'MongoDB', 'AWS', 'React.js']
+    },
+    {
+      title: 'Community Moderator',
+      company: 'PushChain',
+      period: 'Jan 2024 - July 2025',
+      location: 'Remote',
+      description: 'Leading SocialMedia Growth and Community Engagement ',
+      skills: ['React.js', 'TypeScript', 'Web3', 'Ethereum']
+    },
+    {
+      title: 'Community Moderator',
+      company: 'HUDDLE 01',
+      period: 'July 2024 - Nov 2024',
+      location: 'Remote',
+      description: 'Leading SocialMedia Growth and Community Engagement of HUDDLE01 in discord and telegram',
+      skills: ['React.js', 'TypeScript', 'Web3', 'Ethereum']
     }
+   
   ];
 
   const education = [
     {
       degree: 'Bachelor of Computer Science',
       institution: 'University of Technology',
-      period: '2018 - 2022',
-      grade: 'First Class Honours'
+      period: '2023 - 2027',
+      grade: '8.5 CGPA'
     }
   ];
 
   const achievements = [
     '5x Hackathon Winner',
     'Blockchain Developer Certification',
-    'AWS Solutions Architect',
-    'Google Cloud Professional'
+    'Best Educational content creator in PushChain ',
+    'Best Content in Builder House(kasol)',
+    '15K Active Users in Rabble ',
+    '1M impressions in PushChain in 3months period'
   ];
 
   return (

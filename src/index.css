@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+    .rsc-input input {
+      @apply text-white bg-gray-800;
+    }
+  }
+  

@@ -9,6 +9,7 @@ import ResumeSection from './components/ResumeSection';
 import CollectionsSection from './components/CollectionsSection';
 import ArticlesSection from './components/ArticelsSection';
 import PostsSection from './components/PostsSections';
+import HireMeAssistant from './smallComponents/HireMeAssistant';
 
 function App() {
   const [activeTab, setActiveTab] = useState('WORK');
@@ -61,6 +62,7 @@ function App() {
   {/* Sidebar */}
   <Sidebar darkMode={darkMode} />
         </div>
+        <HireMeAssistant />
       </div>
 
 </div>

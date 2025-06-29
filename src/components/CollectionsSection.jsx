@@ -26,15 +26,8 @@ const CollectionsSection = ({ darkMode }) => {
   return (
     <div className="space-y-8">
       <div className="flex items-center justify-between">
-        <h2 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Collections</h2>
-        <button className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-colors ${
-          darkMode 
-            ? 'bg-green-600 hover:bg-green-700 text-white' 
-            : 'bg-green-500 hover:bg-green-600 text-white'
-        }`}>
-          <Plus className="w-4 h-4" />
-          <span>New Collection</span>
-        </button>
+        <h2 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>BOOKS</h2>
+       
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
