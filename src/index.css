@@ -6,4 +6,6 @@
       @apply text-white bg-gray-800;
     }
   }
-  
+  body {
+    overflow-x: hidden;
+  }

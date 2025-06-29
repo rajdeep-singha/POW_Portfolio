@@ -9,5 +9,8 @@ import ReactDOM from 'react-dom/client'
 //   </StrictMode>,
 // )
 ReactDOM.createRoot(document.getElementById('root')).render(
+ 
+  <div className="w-full overflow-x-hidden">
   <App />
+</div>
 );
