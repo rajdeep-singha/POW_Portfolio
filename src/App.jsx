@@ -19,9 +19,9 @@ function App() {
 
   const renderTabContent = () => {
     switch (activeTab) {
-      case 'WORK':
+      case 'HOME':
         return <WorkSection darkMode={darkMode} />;
-      case 'RESUME':
+      case 'EXPERIENCE':
         return <ResumeSection darkMode={darkMode} />;
       case 'COLLECTIONS':
         return <CollectionsSection darkMode={darkMode} />;

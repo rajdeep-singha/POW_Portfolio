@@ -1,7 +1,7 @@
 import React from 'react';
 
 const NavigationTabs = ({ activeTab, setActiveTab, darkMode }) => {
-  const tabs = ['WORK', 'RESUME', 'COLLECTIONS', 'PROJECTS', 'TESTIMONIALS'];
+  const tabs = ['HOME', 'EXPERIENCE', 'COLLECTIONS', 'PROJECTS', 'TESTIMONIALS'];
 
   return (
     <div className={`border-b ${darkMode ? 'border-gray-800' : 'border-gray-200'}`}>
