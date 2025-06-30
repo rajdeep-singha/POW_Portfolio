@@ -10,6 +10,7 @@ import CollectionsSection from './components/CollectionsSection';
 import ArticlesSection from './components/ArticelsSection';
 import PostsSection from './components/PostsSections';
 import HireMeAssistant from './smallComponents/HireMeAssistant';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   const [activeTab, setActiveTab] = useState('WORK');
@@ -24,9 +25,9 @@ function App() {
         return <ResumeSection darkMode={darkMode} />;
       case 'COLLECTIONS':
         return <CollectionsSection darkMode={darkMode} />;
-      case 'ARTICLES':
+      case 'PROJECTS':
         return <ArticlesSection darkMode={darkMode} />;
-      case 'POSTS':
+      case 'TESTIMONIALS':
         return <PostsSection darkMode={darkMode} />;
       default:
         return <WorkSection darkMode={darkMode} />;
@@ -64,7 +65,7 @@ function App() {
         </div>
         <HireMeAssistant />
       </div>
-
+      <SpeedInsights />
 </div>
   )
 }
