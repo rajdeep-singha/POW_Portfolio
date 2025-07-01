@@ -8,7 +8,7 @@ import WorkSection from './components/WorkSection';
 import ResumeSection from './components/ResumeSection';
 import CollectionsSection from './components/CollectionsSection';
 import ArticlesSection from './components/ArticelsSection';
-import PostsSection from './components/PostsSections';
+import TestimonialsSection from './components/TestimonialsSection';
 import HireMeAssistant from './smallComponents/HireMeAssistant';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Analytics } from "@vercel/analytics/react"
@@ -28,7 +28,7 @@ function App() {
       case 'PROJECTS':
         return <ArticlesSection darkMode={darkMode} />;
       case 'TESTIMONIALS':
-        return <PostsSection darkMode={darkMode} />;
+        return <TestimonialsSection darkMode={darkMode} />;
       default:
         return <WorkSection darkMode={darkMode} />;
     }
