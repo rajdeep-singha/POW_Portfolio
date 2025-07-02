@@ -1,66 +1,121 @@
 import React from 'react';
-import {  Folder } from 'lucide-react';
+import { PlayCircle, BookOpen, Video, Mic } from 'lucide-react';
 
 const CollectionsSection = ({ darkMode }) => {
-  const collections = [
+  const books = [
     {
-      title: 'Blockchain Projects',
-      description: 'A collection of my blockchain and Web3 projects',
-      items: 12,
-      image: 'https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop'
+      title: 'Jonathan Livingston Seagull',
+      author: 'Richard Bach',
+      image: '/jonathan.webp'
     },
     {
-      title: 'React Components',
-      description: 'Reusable React components and UI libraries',
-      items: 8,
-      image: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop'
+      title: 'The Compound Effect',
+      author: 'Darren Hardy',
+      image: '/compound.webp'
     },
     {
-      title: 'Design Systems',
-      description: 'Modern design systems and style guides',
-      items: 5,
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop'
+      title: 'The Art of Being Alone',
+      author: 'Renuka Gavrani',
+      image: 'alone.webp'
+    },
+    {
+      title: 'Who Moved My Cheese?',
+      author: 'Spencer Johnson',
+      image: 'cheese.webp'
+    },
+    {
+      title: 'Wings of Fire',
+      author: 'A.P.J. Abdul Kalam',
+      image: 'wings.webp'
     }
   ];
 
-  return (
-    <div className="space-y-8">
+  const podcasts = [
+    {
+      title: 'Cursor Team: Future of AI',
+      image: 'cursor.png',
+      link: 'https://youtu.be/oFfVt3S51T4?si=eNCdK2z6Ui0hm5Yk'
+    },
+    {
+      title: '40-Minute Intense Tech Talk',
+      image: 'remotejob.png',
+      link: 'https://youtu.be/UaGJdSUA_RM?si=R9ZX9aCZwIKYhN5t'
+    },
+    {
+      title: 'Psychology of Money & Happiness',
+      image: 'money.png',
+      link: 'https://youtu.be/z5W74QC3v2I?si=PVunEskQHQC3KMV2'
+    }
+  ];
+
+  const videos = [
+    {
+      title: '6 SECRET STUDY TIPS TO SCORE HIGHEST IN EXAMS',
+      image: '/videos/tips.jpg',
+      link: 'https://www.youtube.com/watch?v=xyz4'
+    },
+    {
+      title: 'Final Exam Week of a Medical Student',
+      image: '/videos/exam.jpg',
+      link: 'https://www.youtube.com/watch?v=xyz5'
+    }
+  ];
+
+  const Section = ({ title, icon: Icon, items, isVideo = false }) => (
+    <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <h2 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Podcasts</h2>
-       
+        <h3 className={`text-xl font-bold flex items-center gap-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+          <Icon className="w-5 h-5" />
+          {title}
+        </h3>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {collections.map((collection, index) => (
-          <div key={index} className={`${
-            darkMode ? 'bg-gray-800 border-gray-700 hover:bg-gray-750' : 'bg-white border-gray-200 hover:bg-gray-50'
-          } rounded-xl border transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer overflow-hidden`}>
-            <div className="aspect-video overflow-hidden">
-              <img 
-                src={collection.image} 
-                alt={collection.title}
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+        {items.map((item, i) => (
+          <div
+            key={i}
+            onClick={() => item.link && window.open(item.link, '_blank')}
+            className={`text-center space-y-2 cursor-pointer group`}
+          >
+            <div
+              className={`relative aspect-[2/3] overflow-hidden rounded-lg shadow-md ${
+                !item.link ? 'pointer-events-none' : ''
+              }`}
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className={`w-full h-full object-cover transition-transform duration-300 ${
+                  !isVideo ? 'group-hover:scale-105' : ''
+                }`}
               />
-            </div>
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className={`text-lg font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                  {collection.title}
-                </h3>
-                <div className="flex items-center space-x-1">
-                  <Folder className={`w-4 h-4 ${darkMode ? 'text-green-400' : 'text-green-500'}`} />
-                  <span className={`text-sm ${darkMode ? 'text-green-400' : 'text-green-500'}`}>
-                    {collection.items}
-                  </span>
+              {isVideo && (
+                <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                  <PlayCircle className="w-10 h-10 text-white" />
                 </div>
-              </div>
-              <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>
-                {collection.description}
-              </p>
+              )}
+            </div>
+            <div>
+              <h4 className={`text-sm font-medium truncate ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                {item.title}
+              </h4>
+              {item.author && (
+                <p className={`text-xs truncate ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                  {item.author}
+                </p>
+              )}
             </div>
           </div>
         ))}
       </div>
+    </div>
+  );
+
+  return (
+    <div className="space-y-12">
+      <Section title="Books" icon={BookOpen} items={books} />
+      <Section title="Podcasts" icon={Mic} items={podcasts} isVideo />
+      <Section title="Must Watch Videos" icon={Video} items={videos} isVideo />
     </div>
   );
 };
