@@ -9,7 +9,8 @@ const ResumeSection = ({ darkMode }) => {
       period: '2024- Present',
       location: 'Remote',
       description: 'Developed and deployed smart contracts in Clarity on Stacks',
-      skills: ['Solidity', 'Ethereum', 'DeFi', 'Smart Contracts', 'Clarity','Move-Lang']
+      skills: ['Solidity', 'Ethereum', 'DeFi', 'Smart Contracts', 'Clarity','Move-Lang'],
+      image: 'star.webp'
     }, 
     {
       title: 'Vice President',
@@ -17,7 +18,8 @@ const ResumeSection = ({ darkMode }) => {
       period: 'Dec 2024 - Present',
       location: 'Remote',
       description: 'Built scalable web applications using modern JavaScript frameworks and cloud technologies.',
-      skills: ['Node.js', 'MongoDB', 'AWS', 'React.js']
+      skills: ['Node.js', 'MongoDB', 'AWS', 'React.js'],
+      image: 'star.webp'
     },
     {
       title: 'Community Moderator',
@@ -25,7 +27,8 @@ const ResumeSection = ({ darkMode }) => {
       period: 'Jan 2024 - July 2025',
       location: 'Remote',
       description: 'Leading SocialMedia Growth and Community Engagement ',
-      skills: ['React.js', 'TypeScript', 'Web3', 'Ethereum']
+      skills: ['React.js', 'TypeScript', 'Web3', 'Ethereum'],
+      image: 'star.webp'
     },
     {
       title: 'Community Moderator',
@@ -33,7 +36,8 @@ const ResumeSection = ({ darkMode }) => {
       period: 'July 2024 - Nov 2024',
       location: 'Remote',
       description: 'Leading SocialMedia Growth and Community Engagement of HUDDLE01 in discord and telegram',
-      skills: ['React.js', 'TypeScript', 'Web3', 'Ethereum']
+      skills: ['React.js', 'TypeScript', 'Web3', 'Ethereum'],
+      image: 'star.webp'
     }
    
   ];
@@ -43,7 +47,8 @@ const ResumeSection = ({ darkMode }) => {
       degree: 'Bachelor of Computer Science',
       institution: 'University of Technology',
       period: '2023 - 2027',
-      grade: '8.5 CGPA'
+      grade: '8.5 CGPA',
+     
     }
   ];
 
@@ -53,7 +58,8 @@ const ResumeSection = ({ darkMode }) => {
     'Best Educational content creator in PushChain ',
     'Best Content in Builder House(kasol)',
     '15K Active Users in Rabble ',
-    '1M impressions in PushChain in 3months period'
+    '1M impressions in PushChain in 3months period',
+    
   ];
 
   return (
@@ -69,6 +75,7 @@ const ResumeSection = ({ darkMode }) => {
           <span>Download PDF</span>
         </button>
       </div>
+      
 
       {/* Experience Section */}
       <div className="space-y-6">
@@ -79,40 +86,53 @@ const ResumeSection = ({ darkMode }) => {
         
         <div className="space-y-6">
           {experiences.map((exp, index) => (
-            <div key={index} className={`${
+            <div key={index} className={`relative ${
               darkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
-            } rounded-xl p-6 border`}>
-              <div className="flex justify-between items-start mb-3">
-                <div>
-                  <h4 className={`text-lg font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                    {exp.title}
-                  </h4>
-                  <div className="flex items-center space-x-2 text-sm">
-                    <Building className={`w-4 h-4 ${darkMode ? 'text-green-400' : 'text-green-500'}`} />
-                    <span className={`font-medium ${darkMode ? 'text-green-400' : 'text-green-500'}`}>
-                      {exp.company}
-                    </span>
-                    <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>•</span>
-                    <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{exp.location}</span>
+            } rounded-xl p-6 border overflow-hidden`}>
+              <div
+  className="absolute inset-0 z-0"
+  style={{
+    backgroundImage: `url(/${exp.image})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    opacity: 0.5,
+    pointerEvents: 'none',
+  }}
+/>
+
+              <div className="relative z-10">
+                <div className="flex justify-between items-start mb-3">
+                  <div>
+                    <h4 className={`text-lg font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                      {exp.title}
+                    </h4>
+                    <div className="flex items-center space-x-2 text-sm">
+                      <Building className={`w-4 h-4 ${darkMode ? 'text-green-400' : 'text-green-500'}`} />
+                      <span className={`font-medium ${darkMode ? 'text-green-400' : 'text-green-500'}`}>
+                        {exp.company}
+                      </span>
+                      <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>•</span>
+                      <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{exp.location}</span>
+                    </div>
                   </div>
-                </div>
-                <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  {exp.period}
-                </span>
-              </div>
-              <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} mb-4`}>
-                {exp.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {exp.skills.map((skill, skillIndex) => (
-                  <span key={skillIndex} className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    darkMode 
-                      ? 'bg-gray-700 text-gray-300' 
-                      : 'bg-gray-100 text-gray-700'
-                  }`}>
-                    {skill}
+                  <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                    {exp.period}
                   </span>
-                ))}
+                </div>
+                <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} mb-4`}>
+                  {exp.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {exp.skills.map((skill, skillIndex) => (
+                    <span key={skillIndex} className={`px-3 py-1 rounded-full text-xs font-medium ${
+                      darkMode 
+                        ? 'bg-gray-700 text-gray-300' 
+                        : 'bg-gray-100 text-gray-700'
+                    }`}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

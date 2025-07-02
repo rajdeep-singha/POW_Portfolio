@@ -90,7 +90,7 @@ const CollectionsSection = ({ darkMode }) => {
                 }`}
               />
               {isVideo && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                <div className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/50 transition-all duration-300">
                   <PlayCircle className="w-10 h-10 text-white" />
                 </div>
               )}
@@ -117,6 +117,7 @@ const CollectionsSection = ({ darkMode }) => {
       <Section title="Podcasts" icon={Mic} items={podcasts} isVideo />
       <Section title="Must Watch Videos" icon={Video} items={videos} isVideo />
     </div>
+    
   );
 };
 
