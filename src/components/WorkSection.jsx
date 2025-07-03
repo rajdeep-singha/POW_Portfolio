@@ -13,7 +13,7 @@ const WorkSection = ({ darkMode }) => {
     { name: 'Substack', icon: <div className="w-4 h-4 bg-white rounded-full"></div>, color: '#ff90e8', link: 'https://substack.com/@geekraj' },
     { name: 'Product Hunt', icon: <div className="w-4 h-4 bg-white rounded text-black text-xs flex items-center justify-center font-bold">P</div>, color: '#da552f', link: 'https://www.producthunt.com/@rajdeepsingha384' },
     { name: 'CodeForces', icon: <div className="w-4 h-4 bg-white rounded text-black text-xs flex items-center justify-center font-bold">C</div>, color: '#1f8dd6', link: 'https://codeforces.com/profile/geek_raj' },
-    { name: 'ADPList', icon: <div className="w-4 h-4 bg-white rounded-full"></div>, color: '#5865f2', link: 'https://adplist.org/mentors/rajdeep-singha' },
+    { name: 'ADPList', icon: <div className="w-4 h-4 bg-white rounded-full"></div>, color: '#5865f2', link: 'https://adplist.org/members/rajdeep-singha' },
     { name: 'LeetCode', icon: <div className="w-4 h-4 bg-white rounded text-black text-xs flex items-center justify-center font-bold">L</div>, color: '#ffa116' },
     { name: 'Instagram', icon: <div className="w-4 h-4 bg-yellow rounded-full"></div>, color: '#da1bd1', link: 'https://www.instagram.com/rajdeep.dev_01/' }
   ];
