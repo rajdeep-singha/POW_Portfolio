@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
 import './App.css'
 import Header from './components/Header';
 import ProfileSection from './components/ProfileSection';
@@ -12,8 +12,10 @@ import TestimonialsSection from './components/TestimonialsSection';
 import HireMeAssistant from './smallComponents/HireMeAssistant';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Analytics } from "@vercel/analytics/react"
+import GallerySection from './smallComponents/GallerySection';
+
 function App() {
-  const [activeTab, setActiveTab] = useState('WORK');
+  const [activeTab, setActiveTab] = useState('HOME');
   const [darkMode, setDarkMode] = useState(true);
 
 
@@ -29,6 +31,8 @@ function App() {
         return <ArticlesSection darkMode={darkMode} />;
       case 'TESTIMONIALS':
         return <TestimonialsSection darkMode={darkMode} />;
+      case 'GALLERY':
+        return <GallerySection darkMode={darkMode} />;
       default:
         return <WorkSection darkMode={darkMode} />;
     }
@@ -62,6 +66,7 @@ function App() {
 
   {/* Sidebar */}
   <Sidebar darkMode={darkMode} />
+ 
         </div>
         <HireMeAssistant />
       </div>

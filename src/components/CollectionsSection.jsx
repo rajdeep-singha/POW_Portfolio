@@ -48,18 +48,18 @@ const CollectionsSection = ({ darkMode }) => {
     }
   ];
 
-  const videos = [
-    {
-      title: '6 SECRET STUDY TIPS TO SCORE HIGHEST IN EXAMS',
-      image: '/videos/tips.jpg',
-      link: 'https://www.youtube.com/watch?v=xyz4'
-    },
-    {
-      title: 'Final Exam Week of a Medical Student',
-      image: '/videos/exam.jpg',
-      link: 'https://www.youtube.com/watch?v=xyz5'
-    }
-  ];
+  // const videos = [
+  //   {
+  //     title: '6 SECRET STUDY TIPS TO SCORE HIGHEST IN EXAMS',
+  //     image: '/videos/tips.jpg',
+  //     link: 'https://www.youtube.com/watch?v=xyz4'
+  //   },
+  //   {
+  //     title: 'Final Exam Week of a Medical Student',
+  //     image: '/videos/exam.jpg',
+  //     link: 'https://www.youtube.com/watch?v=xyz5'
+  //   }
+  // ];
 
   const Section = ({ title, icon: Icon, items, isVideo = false }) => (
     <div className="space-y-4">
@@ -115,7 +115,7 @@ const CollectionsSection = ({ darkMode }) => {
     <div className="space-y-12">
       <Section title="Books" icon={BookOpen} items={books} />
       <Section title="Podcasts" icon={Mic} items={podcasts} isVideo />
-      <Section title="Must Watch Videos" icon={Video} items={videos} isVideo />
+      {/* <Section title="Must Watch Videos" icon={Video} items={videos} isVideo /> */}
     </div>
     
   );

@@ -1,9 +1,10 @@
 import React from 'react';
 
 const NavigationTabs = ({ activeTab, setActiveTab, darkMode }) => {
-  const tabs = ['HOME', 'EXPERIENCE', 'COLLECTIONS', 'PROJECTS', 'TESTIMONIALS'];
+  const tabs = ['HOME', 'EXPERIENCE', 'COLLECTIONS', 'PROJECTS', 'TESTIMONIALS', 'GALLERY'];
 
   return (
+    <div className="flex overflow-x-auto space-x-4 px-4 sm:px-0 scrollbar-hide">
     <div className={`border-b ${darkMode ? 'border-gray-800' : 'border-gray-200'}`}>
       <nav className="flex space-x-8">
         {tabs.map((tab) => (
@@ -22,6 +23,7 @@ const NavigationTabs = ({ activeTab, setActiveTab, darkMode }) => {
           </button>
         ))}
       </nav>
+    </div>
     </div>
   );
 };
