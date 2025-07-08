@@ -14,6 +14,24 @@ const SaveMessageComponent = ({ steps, triggerNextStep }) => {
         console.error("Error saving message:", error);
         triggerNextStep({ trigger: 'error' });
       } else {
+
+        try {
+          await fetch("http://localhost:5000/send-email", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              to: "rajdeepsingha384@gmail.com",
+              subject: "New Chatbot Message",
+              text: `User said: ${userMessage}`
+            })
+          });
+        } catch (err) {
+          console.error("Email send failed:", err);
+          // 
+        }
+
         triggerNextStep();
       }
     };

@@ -197,5 +197,4 @@ const ResumeSection = ({ darkMode }) => {
     </div>
   );
 };
-
 export default ResumeSection;

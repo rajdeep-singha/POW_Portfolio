@@ -24,6 +24,7 @@ const HireMeAssistant = () => {
     alert("Thanks for your message! Rajdeep will get back to you soon.");
   };
 
+ 
   const steps = [
     {
       id: '1',
@@ -128,8 +129,12 @@ const HireMeAssistant = () => {
           floating={true}
           headerTitle="Rajdeep's Assistant 💬"
           handleEnd={handleEnd}
+          inputStyle={{ color: 'black' }}
+          placeholder="Type your message here..."
         />
       </ThemeProvider>
+
+
     </div>
   );
 };
