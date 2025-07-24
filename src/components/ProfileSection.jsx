@@ -17,6 +17,7 @@ const ProfileSection = ({ darkMode }) => {
     { name: 'Node.JS', color: '#339933' },
     { name: 'MongoDB', color: '#47a248' }
   ];
+  
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <div className="text-center">

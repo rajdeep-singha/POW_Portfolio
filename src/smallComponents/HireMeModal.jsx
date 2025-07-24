@@ -29,7 +29,7 @@ const HireMeModal = ({ isOpen, onClose, darkMode }) => {
         </p>
 
         <a
-          href="rajdeepsingha384@gmail.com"
+          href="https://x.com/singh61402"
           target="_blank"
           className="inline-block px-4 py-2 bg-green-500 text-black rounded-md font-medium hover:bg-green-600 transition"
         >
